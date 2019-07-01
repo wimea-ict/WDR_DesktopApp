@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+    <div class="panel-heading">WDR User information.</div>
+    <div class="panel-body">
+          <form class="form-horizontal" (submit)="backToViewUsers()">
+            <div class="form-group">
+                  <label for="id" class="col-sm-2 control-label">User id </label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control"  [(ngModel)]="user.id" name="id" readonly>
+                  </div>
+                </div>
+            <div class="form-group">
+              <label for="name" class="col-sm-2 control-label">User's Name  </label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control"  [(ngModel)]="user.name" name="name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="username" class="col-sm-2 control-label">Username  </label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" [(ngModel)]="user.username" name="username">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email  </label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control"  [(ngModel)]="user.email" name="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="text" class="col-sm-2 control-label">Created on  </label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control"  [(ngModel)]="user.createdAt" name="createdAt">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="text" class="col-sm-2 control-label">Last updated on  </label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control"  [(ngModel)]="user.updatedAt" name="updatedAt">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-6 col-sm-2">
+                <a  class="btn btn-info" (click)="backToViewUsers()">Cancel</a>
+              </div>
+
+            </div>
+
+      </form>
+    </div>
+  </div>

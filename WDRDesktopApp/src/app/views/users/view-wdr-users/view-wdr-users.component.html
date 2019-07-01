@@ -1,0 +1,37 @@
+<section>
+  <ol class=" row">
+      <h3  class="active text-primary" >User Management</h3>
+
+  </ol>
+</section>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+       <!-- <th>Id</th> -->
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <td>Created At</td>
+      <td>Updated At</td>
+      <td width=275 align="center">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let user of wdrUsers">
+        <!-- <td>{{user.id}}</td> -->
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.createdAt}}</td>
+        <td>{{user.updatedAt}}</td>
+        <td width=275>
+            <a class="btn btn-info" (click)="view(users)">Detail</a> &nbsp;&nbsp;
+            <a class="btn btn-success" (click)="edit(user)">Edit</a>&nbsp;&nbsp;
+            <a class="btn btn-danger" (click)="deleteUser(users.id)">Delete</a>
+        </td>
+     </tr>
+  </tbody>
+
+</table>
